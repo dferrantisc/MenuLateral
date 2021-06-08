@@ -1,0 +1,109 @@
+----------------------------Menu Lateral: 
+
+/*Configs e Estilos do Menu Lateral*/
+
+a {
+  text-decoration: none;
+  color: black;
+  display: block;
+  padding: 20px 5px;
+  color: black;
+}
+
+body {
+  font-family: Arial;
+  background-color: #d1ccc0;
+  /*background: url("fundo.jpg");
+  background-size: 100%;*/
+}
+
+ul {
+  list-style: none;
+
+  /*background-color: salmon;*/
+  top: 80px;
+  position: absolute;
+  width: 100%;
+}
+
+img {
+  width: 40px;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+nav {
+  background-color: rgba(16, 16, 16, 0.5);
+  width: 350px;
+  height: 100%;
+  left: -350px;
+  position: absolute;
+  transition: all 0.5s;
+}
+
+input[type="checkbox"]:checked ~ nav {
+  transform: translateX(350px);
+}
+
+a:hover {
+  background-color: #ffb142;
+  color: #2c3e50;
+}
+
+label {
+  /*background-color: purple;*/
+  padding: 15px;
+  position: absolute;
+  z-index: 1;
+}
+
+
+
+
+
+-------------------------/*MENU HORIZONTAL*/
+
+li {
+  color: aquamarine;
+  background-color: burlywood;
+  display: block;
+  float: left;
+  padding: 18px;
+  position: relative;
+  text-decoration: none;
+  transition-duration: 00.5s;
+}
+
+li a {
+  color: black;
+}
+
+li:hover {
+  background-color: chocolate;
+  cursor: pointer;
+}
+
+ul li ul {
+  background-color: darkgreen;
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  transition: all 0.5s ease;
+  margin-top: 18px;
+  left: 0;
+  display: none;
+}
+
+ul li:hover > ul,
+ul li ul:hover {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+
+ul li ul li {
+  clear: both;
+  width: 100%;
+}
